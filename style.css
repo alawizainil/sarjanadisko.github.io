@@ -574,7 +574,7 @@ body {
 
 .header-mv {
   display: flex;
-
+  size: 75px;
   color: #ff9e19;
   justify-content: space-between;
   align-items: center;
@@ -607,14 +607,14 @@ body {
 
 .credits {
   display: grid;
-  font-size: 25;
+  font-size: 25px;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 }
 
 .credit-section h3 {
   color: #ffffff;
-  font-size: 25;
+  font-size: 25px;
   margin-bottom: 0.5rem;
 }
 
