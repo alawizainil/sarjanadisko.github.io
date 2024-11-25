@@ -1,0 +1,948 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
+  background-color: #241965;
+  overflow-x: hidden; 
+}
+
+/* Header Styling */
+header {
+  position: fixed;
+  top: 0;
+  font-size: larger;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  z-index: 1000;
+  background-color: transparent;
+}
+
+header nav {
+  background-color: white;
+  border-radius: 30px;
+  padding: 8px 40px;
+  display: flex;
+  gap: 40px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #241965;
+  font-weight: normal;
+  transition: color 0.3s ease, font-weight 0.3s ease; /* Tambahkan transisi */
+  transition: all 0.3s ease;
+}
+
+.nav-link.active {
+  font-weight: bold;
+  color: #F39404;
+}
+
+.nav-link:hover {
+  color: #F39404;
+  transform: scale(1.1);
+}
+
+.logo-link {
+  display: inline-block;
+  margin-right: auto;
+  
+}
+
+.logo-image {
+  width: 125px;
+  height: auto;
+  cursor: pointer;
+  filter: drop-shadow(0px 0px 20px #F19626);
+  transition: all 0.3s ease;
+}
+
+.logo-image:hover{
+  transform: scale(1.1);
+}
+
+/* Section Styling */
+.section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Home Section */
+#home {
+  background-color: #f9f9f9;
+  padding-top: 50px;
+  background-image: url("Assets/HOME\ PAGE_BG.jpg"); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative; /* To position the gradient */
+}
+
+.groove-text-image {
+  width: 600px; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 20px; /* Adjust spacing below the image */
+}
+
+#home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(255, 255, 255, 1), transparent); /* Gradient overlay with 50% opacity at the top */
+  z-index: 1; /* Place the gradient above the background image, but below other content */
+}
+
+#home .center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content vertically */
+  gap: 20px;
+  z-index: 100;
+}
+
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 20px auto;
+  animation: rotate 10s linear infinite; 
+  animation-play-state: running; /* Initially set animation to running */
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#home .circle {
+  width: 300px;
+  height: auto;
+  border-radius: 50%;
+  background-color: transparent;
+  overflow: hidden; /* Hide excess image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+#home .circle img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Maintain aspect ratio and cover the circle */
+  z-index: 100;
+}
+
+#home h1 {
+  font-size: 3em;
+  font-weight: bold;
+  color: #F19626;
+}
+
+.watch-mv-button {
+  display: inline-block;
+  background-color: white;
+  border-radius: 30px;
+  padding: 10px 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #241965;
+  text-decoration: none;
+  box-shadow: 0 6px 0px rgba(36, 25, 101, 1);
+  transition: 0.3s ease;
+  border: 2px solid #241965;
+  z-index: 1;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Added transitions */
+  transition: all 0.3s ease; /* Add a transition for all animatable properties */
+}
+
+.watch-mv-button:hover {
+  background-color: #241965;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0px rgb(0, 0, 0);
+  transform: translateY(-10px) scale(1.01); /* Move up slightly and scale up */
+}
+
+.playMusicButton {
+  display: inline-block;
+  background-color: white;
+  border-radius: 30px;
+  padding: 10px 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  color: #241965;
+  text-decoration: none;
+  box-shadow: 0 6px 0px rgba(36, 25, 101, 1);
+  transition: 0.3s ease;
+  border: 2px solid #241965;
+  z-index: 1;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Added transitions */
+  transition: all 0.3s ease; /* Add a transition for all animatable properties */
+}
+
+.playMusicButton:hover {
+  background-color: #241965;
+  transform: translateY(-2px);
+  transform: translateY(-10px) scale(1.01); /* Move up slightly and scale up */
+}
+
+/* About Section */
+#about {
+  background-color: transparent;
+  background-image: url("Assets/BG\ ABOUT.png"); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 80px;
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align items to the top */
+  margin-bottom: 40px; /* Add spacing below */
+}
+
+.left, .right {
+  width: 48%;
+}
+
+/* ... other styles ... */
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  gap: 20px;
+  position: relative; /* Add this to position the polaroids */
+}
+
+.polaroid-1 {
+  width: 100%;
+  height: auto; 
+  border-radius: 10px;
+  margin-left: 15px;
+  transform: rotate(-3deg);
+  overflow: hidden; 
+  position: relative; /* Add this to position the polaroids */
+  z-index: 2; /* Ensure this polaroid is on top */
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Added transitions */
+  transition: all 0.3s ease; /* Add a transition for all animatable properties */
+}
+
+.polaroid-1:hover{
+  transform: translateY(-10px) scale(1.1) rotate(2deg); /* Move up slightly and scale up */
+  z-index: 3
+}
+
+.polaroid-2 {
+  width: 80%;
+  height: auto;
+  border-radius: 10px;
+  margin-left: 105px; /* Position slightly to the left of polaroid-1 */
+  transform: rotate(2deg); /* Rotate in the opposite direction */
+  overflow: hidden;
+  position: absolute; /* Position this polaroid absolutely */
+  top: 0px; /* Adjust top and left position as needed */
+  left: 0;
+  z-index: 1; /* Ensure this polaroid is behind polaroid-1 */
+}
+
+.polaroid-3 {
+  width: 80%;
+  height: auto;
+  border-radius: 10px;
+  margin-left: 105px; /* Position slightly to the left of polaroid-1 */
+  transform: rotate(-1deg); /* Rotate in the opposite direction */
+  overflow: hidden;
+  position: absolute; /* Position this polaroid absolutely */
+  top: 230px; /* Adjust top and left position as needed */
+  left: 0;
+  z-index: 1; /* Ensure this polaroid is behind polaroid-1 */
+}
+
+
+.logo-about {
+  width: 35%;
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px;
+  margin-left: 230px;
+  filter: drop-shadow(0px 0px 20px #F19626);
+  overflow: hidden; /* Hide excess image */
+}
+
+.logo-about img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio and cover the box */
+}
+
+.description { /* New class for the band description */
+  color: white;
+  font-size: 1.2em; /* Adjust font size as needed */
+  background-color: #241965;
+  padding: 25px; /* Adjust padding as needed */ 
+  border-radius: 20px; /* Adjust border-radius as needed */
+  margin-top: 50px; /* Optional: Add spacing above the description */
+  margin-right: 10%;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.5);
+  text-align: justify;
+}
+
+.highlight { /* New class for highlighting text */
+  color: #F39404; /* Use your desired color */
+  font-weight: bold;
+}
+
+.caption span {
+  color: #F19626;
+}
+
+/* ... other styles ... */
+
+.song-section {
+  display: flex;
+  gap: 20px;
+}
+
+.music-card, .lyrics-card {
+  width: 600px; 
+  height: auto;
+  border: 2px solid black; 
+  position: relative; /* Required for positioning the pseudo-element */
+}
+
+.music-card::before,
+.lyrics-card::before {
+  content: '';
+  display: block;
+  padding-top: 100%; /* This forces a 1:1 aspect ratio */
+}
+
+.music-card {
+  background-color: #ddd; 
+}
+
+.lyrics-card {
+  background-color: white; 
+}
+
+/* Ensure about-content sections are hidden by default */
+.about-content {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Make the active section visible */
+.about-content.active {
+  display: block;
+  opacity: 1;
+}
+
+/* ... other styles ... */
+
+#about-members .member-grid { /* Added parent selector for better specificity */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-gap: 20px; /* Spacing between grid items */
+}
+
+#about-members .member-grid img { 
+  width: 95%;
+  height: auto; 
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Added transitions */
+  transition: all 0.3s ease; /* Add a transition for all animatable properties */
+}
+
+#about-members.active .member-grid img { /* Styles when the section is active */
+  opacity: 1;
+  transform: translateY(0); 
+}
+
+#about-members:not(.active) .member-grid img { /* Styles when the section is NOT active */
+  opacity: 0;
+  transform: translateY(20px); 
+}
+
+#about-members .member-grid img:hover {
+  transform: translateY(-10px) scale(1.01); /* Move up slightly and scale up */
+}
+
+/* Submenu for About Section */
+.submenu {
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  border-radius: 30px;
+  padding: 8px 40px;
+  display: flex;
+  font-size: larger;
+  gap: 40px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1000000;
+  transition: all 0.3s ease;
+}
+
+.submenu.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.submenu.hide {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-50%) translateY(-20px);
+}
+
+.submenu .submenu-link {
+  text-decoration: none;
+  color: #241965;
+  font-weight: normal;
+  transition: 0.3s;
+}
+
+.submenu .submenu-link.active {
+  font-weight: bold;
+  color: #F39404;
+}
+
+.submenu .submenu-link:hover {
+  color: #F39404;;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+/* About Song */
+body {
+  font-family: Arial, sans-serif;
+  background: url('Background 2.png') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+  padding: 20px;
+}
+
+.music-container {
+  max-width: 800px;
+  margin: auto;
+  background: #4c4084;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.band-photo,
+.about-song {
+  display: none;
+}
+
+.band-photo.active,
+.about-song.active {
+  display: block;
+}
+
+.info-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: white;
+  color: #333;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.lyrics {
+  max-height: 400px;
+  overflow-y: auto;
+  background: #ff9400;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+audio {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.logo {
+  width: 150px;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.band-card {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.play-button,
+.mute-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 30px;
+  color: white;
+}
+
+/* About MV */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(to bottom, #5b009d, #ff9e19);
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(to bottom, #5b009d, #ff9e19);
+  color: white;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 900px;
+  background-color: #241965;
+  padding: 25px; /* Adjust padding as needed */ 
+  border-radius: 20px; /* Adjust border-radius as needed */
+  margin-top: 50px; /* Optional: Add spacing above the description */
+  margin-right: 10%;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.5);
+  text-align: justify;
+}
+
+.header-mv {
+  display: flex;
+  color: #ff9e19;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  color: #f4c842;
+}
+
+.back {
+  color: #ff9e19;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back:hover {
+  text-decoration: underline;
+}
+
+.highlight-mv {
+  color: #ffffff; /* Use your desired color */
+  font-weight: bold;
+}
+.description-mv {
+  font-size: 1.3rem;
+  margin: 1.5rem 0;
+}
+
+.credits {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.credit-section h3 {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.credit-section p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.button-container {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.button-container a {
+  text-decoration: none;
+  color: white;
+  background-color: #ff9e19;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.button-container a:hover {
+  background-color: #e68917;
+}
+
+@media (max-width: 600px) {
+  .header h1 {
+      font-size: 2rem;
+  }
+  .description {
+      font-size: 1.1rem;
+  }
+}
+
+/* Styling for page transitions */
+#page2 {
+  display: none;
+}
+
+.active-page {
+  display: block !important;
+}
+
+.hidden-page {
+  display: none;
+}
+
+/* Contact Section */
+#contact {
+  background-color: transparent;
+  background-image: url("Assets/BG\ CONTACT.png"); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 0px;
+  text-align: center;
+}
+
+.find-us-image {
+  width: 400px; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 50px; /* Adjust spacing below the image */
+  margin-top: -50px;
+}
+
+.social-media-container {
+  position: relative;
+  height: 500px; /* Adjust the height as needed */
+  gap: 100px; /* Increased gap between the heading and buttons */
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  align-items: center; /* Center buttons horizontally */
+  justify-content: space-between; /* Distribute space between buttons */
+}
+
+.social-button {
+  display: inline-flex; /* To align image and text */
+  align-items: center; /* Center image and text vertically */
+  background-color: white;
+  border-radius: 50px;
+  padding:15px 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 2.2em;
+  color: #F19626;
+  text-decoration: none;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  transition: 0.3s ease;
+  margin: -50px; /* Add spacing between buttons */
+  white-space: nowrap;
+  transition: all 0.3s ease; /* Add a transition for all animatable properties */
+}
+
+.social-button img {
+  width: 55px;
+  height: auto;
+  margin-right: 25px;
+}
+
+.social-button:hover{
+  background-color: #e5e5e5;
+  padding:18px 43px;
+  transform: translateY(-6px);
+}
+
+/* Individual button styles */
+.social-button.instagram {
+  transform: rotate(-3deg);
+  color: #653893;
+  transition: all 0.3s ease; /* Add a transition for all animatable properties */
+}
+
+.social-button.tiktok {
+  transform: rotate(5deg);
+  color: #B73D6E; /* Example: Different text color */
+  transition: all 0.3s ease; /* Add a transition for all animatable properties */
+}
+
+.social-button.youtube {
+  transform: rotate(-2deg);
+  transition: all 0.3s ease; /* Add a transition for all animatable properties */
+}
+
+.social-button.instagram:hover {
+  transform: rotate(3deg) scale(1.1);
+}
+
+.social-button.tiktok:hover {
+  transform: rotate(-5deg) scale(1.1);
+}
+
+.social-button.youtube:hover {
+  transform: rotate(2deg) scale(1.1);
+}
+
+.mascot-link {
+  position: absolute; 
+  /* Add specific positioning for each mascot */
+}
+
+.mascot-image {
+  width: 600px; /* Adjust size as needed */
+  height: auto;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Added transitions */
+  transition: all 0.3s ease; /* Add a transition for all animatable properties */
+}
+
+.mascot-image:hover{
+  transform: translateY(-10px) scale(1.01); /* Move up slightly and scale up */
+}
+
+.mascot-1 { /* Target the first mascot link */
+  bottom: -150px;
+  right: 500px;
+  transform: rotate(-10deg);
+}
+
+.mascot-2 { /* More specific selector for the second mascot */
+  bottom: -260px;
+  left: 500px; /* Adjust this value to move it horizontally */
+}
+
+.floating-mascot img { /* Target the image within the mascot link */
+  width: 300px;  /* Adjust the width as needed */
+  height: auto;  /* Maintain aspect ratio */
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Added transitions */
+  transition: all 0.3s ease; /* Add a transition for all animatable properties */
+}
+
+.floating-mascot img:hover{
+  transform: translateY(-10px) scale(1.01); /* Move up slightly and scale up */
+}
+
+.floating-mascot {
+  position: absolute; 
+  z-index: 999;
+}
+
+.mascot-3 {
+  top: 1690px; /* Use percentage values for vertical positioning */
+  left: 1450px; /* Use percentage values for horizontal positioning */
+}
+
+.mascot-4 {
+  bottom: -530px;
+  right: 45%;
+}
+
+/* EASTER EGG */
+#easter-egg {
+  background-color: transparent;
+  background-image: url("Assets/BG\ ABOUT.png"); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative; /* To allow positioning of elements within */
+}
+
+.easter-egg-content {
+  /* This will act as a container for all elements */
+  width: 100%; /* Adjust as needed */
+  max-width: 1200px; /* Optional max-width */
+  margin: 0 auto; /* Center the content */
+  position: relative; /* Allow positioning of child elements */
+}
+
+.easter-egg-text {
+  /* Styles for the Easter Egg text image */
+  display: block; /* Ensures the image is treated as a block-level element */
+  margin-left: auto; /* Set left margin to auto */
+  margin-right: auto; /* Set right margin to auto */
+  width: 100%; /* Adjust as needed */
+  max-width: 700px; /* Optional max-width */
+  margin-top: -400px;
+  animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1); /* Scale up slightly */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.desc {
+  /* Styles for the description boxes */
+  position: absolute;
+  background-color: #241965;
+  font-size: large;
+  color: white;
+  text-align: justify;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  width: 60%; /* Changed width to 40% */
+  
+}
+
+.description-1 {
+  top: -50px; 
+  left: 175px;
+}
+
+.description-2 {
+  top: 200px;
+  right: 150px;
+}
+
+.mascot {
+  /* Styles for the mascot images */
+  position: absolute; /* Allow free positioning */
+  width: 44%; /* Adjust as needed */
+  height: auto;
+}
+
+.beep {
+  bottom: -500px; /* Adjust bottom and left position as needed */
+  left: 1000px;
+}
+
+.bally {
+  bottom: -300px; /* Adjust bottom and right position as needed */
+  right: 950px;
+  transform: rotate(-5deg);
+}
+
+.text-image {
+  position: absolute; /* Allow free positioning */
+  width: 30%; /* Adjust as needed */
+  height: auto;
+}
+
+.text-image-1 {
+  top: -125px; /* Adjust vertical position */
+  left: 165px; /* Adjust horizontal position */
+}
+
+.text-image-2 {
+  width: 37%;
+  height: auto;
+  bottom: -200px; /* Adjust vertical position */
+  right: 140px; /* Adjust horizontal position */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  header {
+      padding: 10px 20px;
+  }
+
+  header nav {
+      gap: 20px;
+      padding: 5px 20px;
+  }
+
+  #home .circle {
+      width: 150px;
+      height: 150px;
+  }
+
+  #home h1 {
+      font-size: 2em;
+  }
+
+  .watch-mv-button {
+    font-size: larger;
+    padding: 8px 30px;
+  }
+
+  .content-wrapper {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+  }
+
+  .left, .right {
+      width: 100%;
+  }
+
+  .placeholder-box.small {
+      width: 75%;
+  }
+
+  .submenu {
+      top: 80px;
+      padding: 5px 20px;
+      gap: 20px;
+  }
+
+  #contact .social-box {
+      width: 80%;
+  }
+}
