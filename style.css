@@ -90,7 +90,7 @@ header nav {
 #home {
   background-color: #f9f9f9;
   padding-top: 50px;
-  background-image: url("Assets/HOME\ PAGE_BG.jpg"); 
+  background-image: url("Assets/HOME\ PAGE_BG.png"); 
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -574,6 +574,7 @@ body {
 
 .header-mv {
   display: flex;
+
   color: #ff9e19;
   justify-content: space-between;
   align-items: center;
