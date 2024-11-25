@@ -607,13 +607,14 @@ body {
 
 .credits {
   display: grid;
+  font-size: 25;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 }
 
 .credit-section h3 {
   color: #ffffff;
-  font-size: 1.2rem;
+  font-size: 25;
   margin-bottom: 0.5rem;
 }
 
