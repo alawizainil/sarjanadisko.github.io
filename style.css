@@ -5,6 +5,12 @@
   box-sizing: border-box;
 }
 
+/* rapihin */
+main {
+  width: 100%;
+
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   scroll-behavior: smooth;
