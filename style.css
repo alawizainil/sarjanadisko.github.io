@@ -467,7 +467,6 @@ header nav {
 
 .behind-the-music-video {
   display: flex;
-  font-size: 75px;
   color: #ff9e19;
   justify-content: space-between;
   align-items: center;
@@ -480,6 +479,9 @@ header nav {
   justify-content: space-between;
   align-items: center;
   font-weight: bold;
+}
+.bold-header {
+  font-size: 75px;
 }
 
 .header-mv h1 {
