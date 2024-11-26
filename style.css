@@ -452,128 +452,30 @@ header nav {
   transform: scale(1.1);
 }
 
-/* About Song */
-body {
-  font-family: Arial, sans-serif;
-  background: url('Background 2.png') no-repeat center center fixed;
-  background-size: cover;
-  color: #333;
-  padding: 20px;
-}
-
-.music-container {
-  max-width: 800px;
-  margin: auto;
-  background: #4c4084;
-  color: white;
-  padding: 20px;
-  border-radius: 8px;
-  position: relative;
-}
-
-.band-photo,
-.about-song {
-  display: none;
-}
-
-.band-photo.active,
-.about-song.active {
-  display: block;
-}
-
-.info-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: white;
-  color: #333;
-  border: none;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-.lyrics {
-  max-height: 400px;
-  overflow-y: auto;
-  background: #ff9400;
-  color: white;
-  padding: 10px;
-  border-radius: 8px;
-  margin-top: 20px;
-}
-
-audio {
-  width: 100%;
-  margin-top: 20px;
-}
-
-.logo {
-  width: 150px;
-  display: block;
-  margin: 0 auto 20px;
-}
-
-.band-card {
-  width: 100%;
-  height: auto;
-  margin-top: 20px;
-  border-radius: 8px;
-}
-
-.controls {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.play-button,
-.mute-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 30px;
-  color: white;
-}
-
-/* About MV */
-body {
-  font-family: 'Montserrat', sans-serif;
-  background: linear-gradient(to bottom, #5b009d, #ff9e19);
-  color: white;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
-.container {
-  max-width: 1100px;
+/* About MV Section */
+.container-mv {
+  max-width: 1200px;
   background-color: #241965;
+  width: 1327px;
+  height: 764px;
   padding: 40px;
   border-radius: 25px;
-  margin-top: 50px;
-  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.5);
-  text-align: center;
+  margin: 50px auto;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  text-align: justify;
 }
 
 .header-mv {
   display: flex;
-  color: #ff9e19 ;
+  color: #ff9e19;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
 }
 
-.header-mv img {
-  max-width: 75px;
-  height: auto;
+.header-mv h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  color: #f4c842;
 }
 
 .back {
@@ -586,33 +488,26 @@ body {
   text-decoration: underline;
 }
 
-.highlight-mv {
-  color: #ffffff;
-  font-weight: bold;
-}
-
 .description-mv {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin: 1.5rem 0;
 }
 
 .credits {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust minmax values as needed */
-  gap: 2rem;
-  font-size: 1.2rem;
-  text-align: left;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
 }
 
 .credit-section h3 {
   color: #ffffff;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
 
 .credit-section p {
   margin: 0;
-  line-height: 1.8;
+  line-height: 1.6;
 }
 
 .button-container {
@@ -620,39 +515,17 @@ body {
   text-align: center;
 }
 
-.button-container a {
+.button-container .next-page {
   text-decoration: none;
   color: white;
   background-color: #ff9e19;
-  padding: 0.8rem 2rem;
-  border-radius: 15px;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
   font-weight: bold;
 }
 
-.button-container a:hover {
+.button-container .next-page:hover {
   background-color: #e68917;
-}
-
-@media (max-width: 600px) {
-  .credits {
-      grid-template-columns: 3;
-  }
-
-  .header-mv img {
-      max-width: 75px;
-  }
-
-  .description-mv {
-      font-size: 1.1rem;
-  }
-
-  .credit-section h3 {
-      font-size: 1.2rem;
-  }
-
-  .credit-section p {
-      font-size: 1rem;
-  }
 }
 
 /* Styling for page transitions */
