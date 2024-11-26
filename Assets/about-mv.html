@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Behind The Music Video</title>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(to bottom, #5b009d, #ff9e19);
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            background-color: #241965;
+            padding: 25px;
+            border-radius: 20px;
+            margin-top: 50px;
+            box-shadow: 0 0px 10px rgba(0, 0, 0, 0.5);
+            text-align: justify;
+        }
+
+        .header-mv {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-mv img {
+            max-width: 250px;
+            height: auto;
+        }
+
+        .back {
+            color: #ff9e19;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back:hover {
+            text-decoration: underline;
+        }
+
+        .highlight-mv {
+            color: #ff9e19;
+            font-weight: bold;
+        }
+
+        .description-mv {
+            font-size: 1.3rem;
+            margin: 1.5rem 0;
+        }
+
+        .credits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust minmax values as needed */
+  gap: 2rem;
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+.credit-section h3 {
+  color: #ffffff;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.credit-section p {
+  margin: 0;
+  line-height: 1.8;
+}
+
+
+        .button-container {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .button-container a {
+            text-decoration: none;
+            color: white;
+            background-color: #ff9e19;
+            padding: 0.8rem 1.5rem;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        .button-container a:hover {
+            background-color: #e68917;
+        }
+
+        @media (max-width: 600px) {
+            .credits {
+                grid-template-columns: 1fr;
+            }
+
+            .header-mv img {
+                max-width: 150px;
+            }
+
+            .description-mv {
+                font-size: 1.1rem;
+            }
+
+            .credit-section h3 {
+                font-size: 1.2rem;
+            }
+
+            .credit-section p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-mv">
+            <img src="Assets/Behind The Music Video.png" alt="Behind The Music Video">
+            <a href="#" class="back" onclick="window.history.back()">Back</a>
+        </div>
+        <p class="description-mv">
+            Bringing the <strong class="highlight-mv">"Get Into the Groove"</strong> music video to life took a talented crew, each adding their own magic to create Sarjana Disko's unique vibe.
+        </p>
+        <div class="credits">
+            <div class="credit-section">
+                <h3>Project Manager</h3>
+                <p>Marcell Joshua Panggabean</p>
+                <h3>Director</h3>
+                <p>Panji Matahari</p>
+                <h3>Assistant Director</h3>
+                <p>Chavali Velma Humaira</p>
+                <h3>Scriptwriter</h3>
+                <p>Panji Matahari</p>
+                <h3>Editor</h3>
+                <p>Erga Putra Pradana</p>
+                <h3>Actors</h3>
+                <p>Muhammad Raya Nauval<br>Qheyla Zavyeva Valendro</p>
+            </div>
+            <div class="credit-section">
+                <h3>Head of Music</h3>
+                <p>Nallegra C. Linggar</p>
+                <h3>Music Video Producer</h3>
+                <p>Muhammad Nazdra Aulia</p>
+                <h3>Line Producer</h3>
+                <p>Kayla Amanda Rivani</p>
+                <h3>Director of Photography</h3>
+                <p>Muhammad Rhagusti Ramadhan</p>
+                <h3>Assistant DOP</h3>
+                <p>Graceilla Alexandra Nathanial</p>
+                <h3>Photographer</h3>
+                <p>Refa Adalati Ridwan</p>
+                <h3>Gaffer</h3>
+                <p>Deva Shizuka Agsha</p>
+            </div>
+            <div class="credit-section">
+                <h3>Best Boy</h3>
+                <p>Nicholas Marvel</p>
+                <h3>Lighting Technician</h3>
+                <p>Alvin Arkananta</p>
+                <h3>Art Director</h3>
+                <p>Yasmin</p>
+                <h3>Make Up Artists</h3>
+                <p>Talitha Zia Faustine<br>Qheyla Zavyeva Valendro</p>
+                <h3>Wardrobe</h3>
+                <p>Alawi Zainil Hadar<br>Namira Ariestiara</p>
+            </div>
+        </div>
+        <div class="button-container">
+            <img src="Assets/Polygon 8.png" alt="Next Button"></a>
+            <a href="#next-page" class="next-button">
+        </div>
+    </div>
+</body>
+</html>

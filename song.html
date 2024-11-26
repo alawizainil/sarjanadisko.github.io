@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: url('Background 2.png') no-repeat center center fixed;
+        background-size: cover;
+        color: #333;
+        padding: 20px;
+      }
+
+      .music-container {
+        max-width: 800px;
+        margin: auto;
+        background: #4c4084;
+        color: white;
+        padding: 20px;
+        border-radius: 8px;
+        position: relative;
+      }
+
+      .band-photo,
+      .about-song {
+        display: none;
+      }
+
+      .band-photo.active,
+      .about-song.active {
+        display: block;
+      }
+
+      .info-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: white;
+        color: #333;
+        border: none;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+      .lyrics {
+        max-height: 400px;
+        overflow-y: auto;
+        background: #ff9400;
+        color: white;
+        padding: 10px;
+        border-radius: 8px;
+        margin-top: 20px;
+      }
+
+      audio {
+        width: 100%;
+        margin-top: 20px;
+      }
+
+      .logo {
+        width: 150px;
+        display: block;
+        margin: 0 auto 20px;
+      }
+
+      .band-card {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+        border-radius: 8px;
+      }
+
+      .controls {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+      }
+
+      .play-button,
+      .mute-button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 30px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="Logo Sadis.png" alt="Sarjana Disko Logo" class="logo">
+    <div class="music-container">
+      <button class="info-button" onclick="toggleInfo()">i</button>
+      <div class="band-photo active">
+        <img src="Band Card 1.png" alt="Band Photo" class="band-card">
+      </div>
+      <div class="about-song">
+        <h2>About The Song</h2>
+        <p>"Get Into the Groove" is Sarjana Disko's energetic debut, composed, mixed, and written by drummer Rafa. His catchy beat and lyrics bring a vibe that makes you want to move. This track isn’t just music—it’s an invitation to let loose and join Sarjana Disko in the groove!</p>
+      </div>
+      <h2>Give Into The Groove</h2>
+      <audio id="audio-player" src="Give in to The Groove.mp3" controls></audio>
+      <div class="controls">
+        <button class="play-button" onclick="togglePlay()">▶</button>
+        <button class="mute-button" onclick="toggleMute()">🔊</button>
+      </div>
+      <div class="lyrics">
+        <h3>Lyrics</h3>
+        <p>
+          Back in the day, my mama would say<br>
+          “Boy don’t you go playin that music”<br>
+          “It’s the Devil’s Work, it ain’t no good”<br>
+          “You’ll movin in the ways that you shouldn’t”<br>
+          <br>
+          So I did that<br>
+          Till uncle Pete came down and taught me about something called Groove<br>
+          It’ll make you move, it’ll make you dance<br>
+          but it ain’t no work of some satan<br>
+          <br>
+          ooo-ooo-ooo<br>
+          Give in to the groove<br>
+          <br>
+          Let the melodies slip into your soul<br>
+          Let them wash away all your concerns<br>
+          Let yourself loose, don’t go holding back<br>
+          Drown in the sensations<br>
+          <br>
+          So I told my ma<br>
+          “Hey this ain’t so bad”<br>
+          “It’s got me movin in a peculiar way”<br>
+          She said “Boy you’re lost”<br>
+          “You’re under his spell”<br>
+          “What you’re doing now is blasphemy”<br>
+          <br>
+          and now we’re groovin<br>
+          we’re groovin<br>
+          we’re groovin to the music<br>
+          and we’re groovin<br>
+          we’re groovin<br>
+          we’re groovin and we’re movin
+        </p>
+      </div>
+    </div>
+    <script>
+      const audioPlayer = document.getElementById('audio-player');
+      const playButton = document.querySelector('.play-button');
+      const muteButton = document.querySelector('.mute-button');
+
+      function togglePlay() {
+        if (audioPlayer.paused) {
+          audioPlayer.play();
+          playButton.textContent = '⏸'; // Pause icon
+        } else {
+          audioPlayer.pause();
+          playButton.textContent = '▶'; // Play icon
+        }
+      }
+
+      function toggleMute() {
+        audioPlayer.muted = !audioPlayer.muted;
+        muteButton.textContent = audioPlayer.muted ? '🔇' : '🔊'; // Muted or Speaker icon
+      }
+
+      function toggleInfo() {
+        const bandPhoto = document.querySelector('.band-photo');
+        const aboutSong = document.querySelector('.about-song');
+        if (bandPhoto.classList.contains('active')) {
+          bandPhoto.classList.remove('active');
+          aboutSong.classList.add('active');
+        } else {
+          aboutSong.classList.remove('active');
+          bandPhoto.classList.add('active');
+        }
+      }
+    </script>
+  </body>
+</html>
