@@ -482,6 +482,7 @@ header nav {
 }
 .bold-header {
   font-size: 75px;
+  font-weight: bold;
 }
 
 .header-mv h1 {
@@ -526,10 +527,10 @@ header nav {
 
 .button-container {
   margin-top: 2rem;
-  text-align: center;
+  text-align: right;
 }
 
-.button-container .next-page {
+.button-container .ARROW\LEFT {
   text-decoration: none;
   color: white;
   background-color: #ff9e19;
@@ -538,9 +539,10 @@ header nav {
   font-weight: bold;
 }
 
-.button-container .next-page:hover {
-  background-color: #ff9e19;
+.button-container .ARROW\LEFT:hover {
+  text-decoration: underline;
 }
+
 .next-page {
   display: none;
   opacity: 0;
