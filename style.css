@@ -457,7 +457,7 @@ header nav {
   max-width: 1200px;
   background-color: #241965;
   width: 1327px;
-  height: 764px;
+  height: 700px;
   padding: 40px;
   border-radius: 25px;
   margin: 20px auto;
@@ -467,9 +467,11 @@ header nav {
 
 .header-mv {
   display: flex;
+  font-size: 75px;
   color: #ff9e19;
   justify-content: space-between;
   align-items: center;
+  font-weight: bold;
 }
 
 .header-mv h1 {
