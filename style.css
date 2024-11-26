@@ -465,9 +465,17 @@ header nav {
   text-align: justify;
 }
 
-.header-mv {
+.behind-the-music-video {
   display: flex;
   font-size: 75px;
+  color: #ff9e19;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.header-mv {
+  display: flex;
   color: #ff9e19;
   justify-content: space-between;
   align-items: center;
